@@ -1,12 +1,12 @@
 import React from "react";
 
-function MoreTime({seconds, onSecondsChange, minutes, onMinutesChange}) {
+function MoreTime(props) {
     const timeUp = () => {
-        if (seconds >= 40) {
-            onSecondsChange(seconds - 40);
-            onMinutesChange(minutes + 1);
+        if (props.seconds >= 40) {
+            props.secondsChange(props.seconds - 40);
+            props.minutesChange(props.minutes + 1);
         } else {
-            onSecondsChange(seconds + 20);
+            props.secondsChange(props.seconds + 20);
         }
     };
 
