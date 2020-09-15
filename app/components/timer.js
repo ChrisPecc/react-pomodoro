@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import TimerDisplay from "./timer-display";
 import ModalWindow from "./modal";
 import Button from "./button";
+import audiofile from "../../assets/sound/foghorn-soundbible.mp3";
 
 const Timer = () => {
     const [seconds, setSeconds] = useState(0);
@@ -10,6 +11,8 @@ const Timer = () => {
     const [isModalActive, setIsModalActive] = useState(false);
     const [studyBreak, setStudyBreak] = useState(20);
     const [isStudyTimer, setIsStudyTimer] = useState(true);
+
+    const audio = new Audio(audiofile);
 
     const toggleStudy = () => {
         if (isStudyTimer) {
@@ -91,6 +94,7 @@ const Timer = () => {
             interval = setInterval(() => {
                 if (seconds === 0) {
                     if (minutes === 0) {
+                        audio.play();
                         clearInterval(interval);
                         setIsModalActive(true);
                         setIsActive(false);
