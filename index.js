@@ -1,6 +1,6 @@
 // index.js
 import React from "react";
 import ReactDOM from "react-dom";
-import Timer from "./app/timer.js";
+import App from "./app/components/timer.js";
 
-ReactDOM.render(<Timer />, document.querySelector("#root"));
+ReactDOM.render(<App />, document.querySelector("#root"));

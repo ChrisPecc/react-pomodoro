@@ -1,17 +1,22 @@
 import React from "react";
-import ResetTimer from "./reset-timer";
-import CloseModal from "./close-modal";
+import Button from "./button";
 
 function ModalWindow(props) {
     return (
-        <div>
+        <div className={"modal"}>
             <h2>{"Your time is up!"}</h2>
-            <CloseModal setIsModalActive={props.setIsModalActive} />
-            <ResetTimer
-                setIsModalActive={props.setIsModalActive}
-                setSeconds={props.setSeconds}
-                setMinutes={props.setMinutes}
-            />
+            <div className={"modal-buttons"}>
+                <Button
+                    className={"button button-reset"}
+                    handleOnClick={props.reset}
+                    label={"Launch a new Timer"}
+                />
+                <Button
+                    className={"button button-close-modal"}
+                    handleOnClick={props.closeModal}
+                    label={"Close"}
+                />
+            </div>
         </div>
     );
 }

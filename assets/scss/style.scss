@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+body {
+    margin: 0px;
+    background-color: #0892d0;
+}
+
+// GENERAL STYLE
+
+.button {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    box-shadow: none;
+
+    &:hover{
+        background-color: rgb(26, 26, 26);
+        color: gold;
+    }
+
+    &:disabled {
+        background-color: rgb(194, 194, 194);
+
+        &:hover {
+            color:white;
+        }
+    }
+}
+
+.button-stop {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+.pomodoro {
+    width: 100%;
+    height: 100vh;
+    
+    
+    .timer {
+        background-color: grey;
+        border: 1px solid white;
+        
+        
+        .timer-display {
+            background-color: black;
+            color: green;
+    
+            h1 {
+                font-family: 'Orbitron', sans-serif;
+                margin: 0;
+            }
+        }
+    }
+
+    .modal {
+        z-index: 42;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        background-color: teal;
+        color: white;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        text-align: center;
+    }
+} 
+
+// SMARTPHONE 
+
+@media only screen and (max-width: 420px) {
+    
+    .button {   
+        padding: 10px 20px 10px 20px;    
+    }
+
+    .pomodoro {
+        display: flex;
+        align-items: center;
+    }
+
+    .timer {
+        padding: 10px;
+        border-radius: 15px;
+        margin: auto;
+        min-width: 270px;
+        
+        .timer-display {
+            margin: 10px;
+            text-align: center;
+            border-radius: 15px;
+    
+            h1 {
+                font-weight: 600;
+                font-size: 42px;
+                
+            }
+        }
+    }
+
+    .command-buttons {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        
+
+        .button-toggle {
+            border-radius: 10px 0 0 10px;
+        }
+        
+
+        .button-reset {
+            border-radius: 0 10px 10px 0;
+        }
+    }
+
+    .time-buttons {
+        padding: 10px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .time-buttons-down {
+            display: flex;
+            flex-direction: column;
+
+            .min-down {
+                border-radius: 10px 10px 0 0;
+            }
+
+            .sec-down {
+                border-top: 1px solid gray;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+
+        .time-buttons-up {
+            display: flex;
+            flex-direction: column-reverse;
+
+            .min-up {
+                border-radius: 10px 10px 0 0;
+            }
+
+            .sec-up {
+                border-top: 1px solid gray;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+
+    }
+
+    .modal-buttons {
+        margin-bottom: 15px;
+        .button-reset {
+            border-radius: 10px 0 0 10px;
+            border-right: 1px solid teal;
+        }
+
+        .button-close-modal {
+            border-radius: 0 10px 10px 0;
+        }
+    }
+
+}
+
+// PAD
+
+@media only screen and (min-width: 421px) and (max-width: 800px) {
+
+
+    .button {   
+        padding: 15px 30px 15px 30px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .pomodoro {
+        display: flex;
+        align-items: center;
+    }
+
+    .timer {
+        padding: 10px;
+        border-radius: 15px;
+        margin: auto;
+        min-width: 450px;
+        max-width: 600px;
+
+        .timer-display {
+            margin: 10px;
+            text-align: center;
+            border-radius: 15px;
+    
+            h1 {
+                font-weight: 600;
+                font-size: 80px;
+                
+            }
+        }
+    }
+
+    .buttons-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .command-buttons {
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            
+    
+            .button-toggle {
+                border-radius: 10px 0 0 10px;
+            }
+            
+    
+            .button-reset {
+                border-radius: 0 10px 10px 0;
+            }
+        }
+    
+        .time-buttons {
+            padding: 10px;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+    
+            .time-buttons-down {
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                
+    
+                .min-down {
+                    border-radius: 10px 0 0 10px;
+                    height: 100%;
+                }
+    
+                .sec-down {
+                    height: 100%;
+                    border-right: 1px solid gray;
+                    border-left: 1px solid gray;
+                    
+                }
+            }
+    
+            .time-buttons-up {
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+    
+                .min-up {
+                    border-radius: 0 10px 10px 0;
+                    height: 100%;
+                }
+    
+                .sec-up {
+                    height: 100%;
+                    border-right: 1px solid gray;
+                }
+            }
+    
+        }
+    }
+
+    .modal-buttons {
+        margin-bottom: 15px;
+        .button-reset {
+            border-radius: 10px 0 0 10px;
+            border-right: 1px solid teal;
+        }
+
+        .button-close-modal {
+            border-radius: 0 10px 10px 0;
+        }
+    }
+}
+
+// DESKTOP
+@media only screen and (min-width:801px) and (max-width: 1000px){
+    .timer {
+        width: 700px;
+    }
+
+    .buttons-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 1001px) {
+    .timer {
+        width: 900px;
+    }
+
+    .buttons-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    .button {   
+        padding: 15px 30px 15px 30px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    
+    .pomodoro {
+        display: flex;
+        align-items: center;
+    }
+    
+    .timer {
+        margin: auto;
+        padding: 20px;
+        border-radius: 20px;
+        
+        .timer-display {
+            margin: 10px;
+            text-align: center;
+            border-radius: 20px;
+    
+            h1 {
+                font-weight: 600;
+                font-size: 100px;
+                
+            }
+        }
+    }
+
+    .buttons-section {
+
+        .command-buttons {
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            
+    
+            .button-toggle {
+                border-radius: 10px 0 0 10px;
+            }
+            
+    
+            .button-reset {
+                border-radius: 0 10px 10px 0;
+            }
+        }
+    
+        .time-buttons {
+            padding: 20px;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+    
+            .time-buttons-down {
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                
+    
+                .min-down {
+                    border-radius: 10px 0 0 10px;
+                    height: 100%;
+                }
+    
+                .sec-down {
+                    height: 100%;
+                    border-right: 1px solid gray;
+                    border-left: 1px solid gray;
+                    
+                }
+            }
+    
+            .time-buttons-up {
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+    
+                .min-up {
+                    border-radius: 0 10px 10px 0;
+                    height: 100%;
+                }
+    
+                .sec-up {
+                    height: 100%;
+                    border-right: 1px solid gray;
+                }
+            }
+    
+        }
+    }
+
+    .modal-buttons {
+        margin-bottom: 15px;
+        .button-reset {
+            border-radius: 10px 0 0 10px;
+            border-right: 1px solid teal;
+        }
+
+        .button-close-modal {
+            border-radius: 0 10px 10px 0;
+        }
+    }
+}

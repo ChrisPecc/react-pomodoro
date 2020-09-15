@@ -2,7 +2,7 @@ import React from "react";
 
 function TimerDisplay(props) {
     return (
-        <div className={"time"}>
+        <div className={"timer-display"}>
             <h1>
                 {props.minutes < 10 && "0"}
                 {props.minutes}
