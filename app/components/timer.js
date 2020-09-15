@@ -8,8 +8,23 @@ const Timer = () => {
     const [minutes, setMinutes] = useState(20);
     const [isActive, setIsActive] = useState(false);
     const [isModalActive, setIsModalActive] = useState(false);
+    const [studyBreak, setStudyBreak] = useState(20);
+    const [isStudyTimer, setIsStudyTimer] = useState(true);
 
-    const toggle = () => {
+    const toggleStudy = () => {
+        if (isStudyTimer) {
+            setIsStudyTimer(false);
+            setStudyBreak(5);
+            setMinutes(5);
+        } else {
+            setIsStudyTimer(true);
+            setStudyBreak(20);
+            setMinutes(20);
+        }
+        setSeconds(0);
+    };
+
+    const toggleStart = () => {
         if (!isActive) {
             setIsActive(true);
         } else {
@@ -24,7 +39,8 @@ const Timer = () => {
     };
 
     const reset = () => {
-        setMinutes(20);
+        // setMinutes(20);
+        setMinutes(studyBreak);
         setSeconds(0);
         setIsActive(false);
         setIsModalActive(false);
@@ -100,7 +116,7 @@ const Timer = () => {
                     <div className={"command-buttons"}>
                         <Button
                             className={"button button-toggle start"}
-                            handleOnClick={toggle}
+                            handleOnClick={toggleStart}
                             label={!isActive ? " Start" : "Pause"}
                             isActive={isModalActive ? true : false}
                         />
@@ -147,6 +163,18 @@ const Timer = () => {
                             />
                         </div>
                     </div>
+                </div>
+                <div className={"set-timer-type"}>
+                    <Button
+                        className={"button study-toggle"}
+                        handleOnClick={toggleStudy}
+                        label={
+                            isStudyTimer
+                                ? "Change to Break timer"
+                                : "Change to Study timer"
+                        }
+                        isActive={isModalActive ? true : isActive}
+                    />
                 </div>
             </section>
             {isModalActive && (

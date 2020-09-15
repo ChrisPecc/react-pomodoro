@@ -30,6 +30,10 @@ body {
     }
 }
 
+.study-toggle {
+    border-radius: 10px;
+}
+
 .button-stop {
     border-left: 1px solid grey;
     border-right: 1px solid grey;
@@ -122,7 +126,7 @@ body {
         
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         .time-buttons-down {
             display: flex;
@@ -152,6 +156,20 @@ body {
             }
         }
 
+    }
+
+    .set-timer-type {
+        text-align: center;
+        padding: 10px;
+
+        .study-timer {
+            border-radius: 10px 0 0 10px;
+        }
+
+        .break-timer {
+            border-radius: 0 10px 10px 0;
+            border-left: 1px solid grey;
+        }
     }
 
     .modal-buttons {
@@ -270,6 +288,20 @@ body {
         }
     }
 
+    .set-timer-type {
+        padding: 10px;
+        text-align: center;
+
+        .study-timer {
+            border-radius: 10px 0 0 10px;
+        }
+
+        .break-timer {
+            border-radius: 0 10px 10px 0;
+            border-left: 1px solid grey;
+        }
+    }
+
     .modal-buttons {
         margin-bottom: 15px;
         .button-reset {
@@ -294,6 +326,20 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
+    .set-timer-type {
+        padding: 20px;
+        text-align: center;
+
+        .study-timer {
+            border-radius: 10px 0 0 10px;
+        }
+
+        .break-timer {
+            border-radius: 0 10px 10px 0;
+            border-left: 1px solid grey;
+        }
+    }
 }
 
 @media only screen and (min-width: 1001px) {
@@ -305,6 +351,19 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .set-timer-type {
+        padding: 20px;
+
+        .study-timer {
+            border-radius: 10px 0 0 10px;
+        }
+
+        .break-timer {
+            border-radius: 0 10px 10px 0;
+            border-left: 1px solid grey;
+        }
     }
 }
 

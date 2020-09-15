@@ -28,6 +28,10 @@ body {
   color: white;
 }
 
+.study-toggle {
+  border-radius: 10px;
+}
+
 .button-stop {
   border-left: 1px solid grey;
   border-right: 1px solid grey;
@@ -117,9 +121,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .time-buttons .time-buttons-down {
     display: -webkit-box;
@@ -152,6 +156,17 @@ body {
   .time-buttons .time-buttons-up .sec-up {
     border-top: 1px solid gray;
     border-radius: 0 0 10px 10px;
+  }
+  .set-timer-type {
+    text-align: center;
+    padding: 10px;
+  }
+  .set-timer-type .study-timer {
+    border-radius: 10px 0 0 10px;
+  }
+  .set-timer-type .break-timer {
+    border-radius: 0 10px 10px 0;
+    border-left: 1px solid grey;
   }
   .modal-buttons {
     margin-bottom: 15px;
@@ -277,6 +292,17 @@ body {
     height: 100%;
     border-right: 1px solid gray;
   }
+  .set-timer-type {
+    padding: 10px;
+    text-align: center;
+  }
+  .set-timer-type .study-timer {
+    border-radius: 10px 0 0 10px;
+  }
+  .set-timer-type .break-timer {
+    border-radius: 0 10px 10px 0;
+    border-left: 1px solid grey;
+  }
   .modal-buttons {
     margin-bottom: 15px;
   }
@@ -305,6 +331,17 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .set-timer-type {
+    padding: 20px;
+    text-align: center;
+  }
+  .set-timer-type .study-timer {
+    border-radius: 10px 0 0 10px;
+  }
+  .set-timer-type .break-timer {
+    border-radius: 0 10px 10px 0;
+    border-left: 1px solid grey;
+  }
 }
 
 @media only screen and (min-width: 1001px) {
@@ -322,6 +359,16 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .set-timer-type {
+    padding: 20px;
+  }
+  .set-timer-type .study-timer {
+    border-radius: 10px 0 0 10px;
+  }
+  .set-timer-type .break-timer {
+    border-radius: 0 10px 10px 0;
+    border-left: 1px solid grey;
   }
 }
 
