@@ -25,7 +25,7 @@ It was adviced to prefer the use of React hooks rather than React classes.
 
 ## Time Limit
 
-The project was given september 10th 2020 and the deadline was september 16th 2020 at 5pm.
+The project was given september 10th 2020 and the deadline was september 17th 2020 at 9am.
 
 ## Links
 
