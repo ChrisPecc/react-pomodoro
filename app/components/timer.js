@@ -6,10 +6,10 @@ import audiofile from "../../assets/sound/Bell-SoundBible.mp3";
 
 const Timer = () => {
     const [seconds, setSeconds] = useState(0);
-    const [minutes, setMinutes] = useState(20);
+    const [minutes, setMinutes] = useState(25);
     const [isActive, setIsActive] = useState(false);
     const [isModalActive, setIsModalActive] = useState(false);
-    const [studyBreak, setStudyBreak] = useState(20);
+    const [studyBreak, setStudyBreak] = useState(25);
     const [isStudyTimer, setIsStudyTimer] = useState(true);
 
     const audio = new Audio(audiofile);
@@ -49,8 +49,8 @@ const Timer = () => {
             setMinutes(5);
         } else {
             setIsStudyTimer(true);
-            setStudyBreak(20);
-            setMinutes(20);
+            setStudyBreak(25);
+            setMinutes(25);
         }
         setSeconds(0);
     };
