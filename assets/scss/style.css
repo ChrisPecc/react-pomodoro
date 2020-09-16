@@ -32,6 +32,10 @@ body {
   border-radius: 10px;
 }
 
+.button-start-label {
+  white-space: pre-wrap;
+}
+
 .button-stop {
   border-left: 1px solid grey;
   border-right: 1px solid grey;
@@ -346,7 +350,7 @@ body {
 
 @media only screen and (min-width: 1001px) {
   .timer {
-    width: 950px;
+    width: 962px;
   }
   .buttons-section {
     display: -webkit-box;

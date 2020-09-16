@@ -15,9 +15,9 @@ const Timer = () => {
     const audio = new Audio(audiofile);
 
     const startLabel = (
-        <span>
+        <span className={"button-start-label"}>
             <i className={"fas fa-play"}> </i>
-            {" Start"}
+            {" Start "}
         </span>
     );
 
