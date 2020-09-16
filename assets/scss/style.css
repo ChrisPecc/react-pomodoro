@@ -346,7 +346,7 @@ body {
 
 @media only screen and (min-width: 1001px) {
   .timer {
-    width: 900px;
+    width: 950px;
   }
   .buttons-section {
     display: -webkit-box;

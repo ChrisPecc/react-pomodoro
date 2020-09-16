@@ -14,6 +14,34 @@ const Timer = () => {
 
     const audio = new Audio(audiofile);
 
+    const startLabel = (
+        <span>
+            <i className={"fas fa-play"}> </i>
+            {" Start"}
+        </span>
+    );
+
+    const pauseLabel = (
+        <span>
+            <i className={"fas fa-pause"}> </i>
+            {" Pause"}
+        </span>
+    );
+
+    const resetLabel = (
+        <span>
+            <i className={"fas fa-undo"}> </i>
+            {" Reset"}
+        </span>
+    );
+
+    const stopLabel = (
+        <span>
+            <i className={"fas fa-stop"}> </i>
+            {" Stop"}
+        </span>
+    );
+
     const toggleStudy = () => {
         if (isStudyTimer) {
             setIsStudyTimer(false);
@@ -121,19 +149,19 @@ const Timer = () => {
                         <Button
                             className={"button button-toggle start"}
                             handleOnClick={toggleStart}
-                            label={!isActive ? "Start" : "Pause"}
+                            label={!isActive ? startLabel : pauseLabel}
                             isActive={isModalActive ? true : false}
                         />
                         <Button
                             className={"button button-stop"}
                             handleOnClick={stop}
-                            label={"Stop"}
+                            label={stopLabel}
                             isActive={isModalActive ? true : false}
                         />
                         <Button
                             className={"button button-reset"}
                             handleOnClick={reset}
-                            label={"Reset"}
+                            label={resetLabel}
                             isActive={isModalActive ? true : false}
                         />
                     </div>
