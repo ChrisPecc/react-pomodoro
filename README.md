@@ -29,6 +29,6 @@ The project was given september 10th 2020 and the deadline was september 16th 20
 
 ## Links
 
-__Github repository :__ https://github.com/ChrisPecc/react-pomodoro
+**_Github repository :_** https://github.com/ChrisPecc/react-pomodoro
 
-__Deployed verison :__ https://reactpomodorochris.netlify.app/
+**_Deployed verison :_** https://reactpomodorochris.netlify.app/
