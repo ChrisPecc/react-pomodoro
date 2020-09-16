@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import TimerDisplay from "./timer-display";
 import ModalWindow from "./modal";
 import Button from "./button";
-import audiofile from "../../assets/sound/foghorn-soundbible.mp3";
+import audiofile from "../../assets/sound/Bell-SoundBible.mp3";
 
 const Timer = () => {
     const [seconds, setSeconds] = useState(0);
@@ -121,7 +121,7 @@ const Timer = () => {
                         <Button
                             className={"button button-toggle start"}
                             handleOnClick={toggleStart}
-                            label={!isActive ? " Start" : "Pause"}
+                            label={!isActive ? "Start" : "Pause"}
                             isActive={isModalActive ? true : false}
                         />
                         <Button
