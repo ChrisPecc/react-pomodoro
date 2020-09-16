@@ -2,7 +2,7 @@
 
 ## Description
 
-This solo project is a part of the Becode Web Developer Training. It lasted from May to November 2020.
+This solo project is a part of the Becode Web Developer Training that lasted from May to November 2020.
 
 The goal of the exercise was to discover [React](https://reactjs.org/). We were asked to create a simple pomodoro timer. 
 
